@@ -60,6 +60,7 @@ class StudentController extends Controller
 
             return back()->with('success', 'Student deleted successfully!');
         }
+       
 
 
 }
