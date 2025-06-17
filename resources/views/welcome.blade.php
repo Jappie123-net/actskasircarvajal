@@ -10,6 +10,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="bg-light py-5">
+    @if(!Auth::check())
+    <div class="mb-3 text-end me-4">
+        <a href="{{ route('login') }}" class="btn btn-outline-primary me-2">Login</a>
+        <a href="{{ route('register') }}" class="btn btn-primary">Sign Up</a>
+    </div>
+@endif
+
     @if(Auth::check())
     <div class="mb-3 text-end">
         <span class="me-2">Hello, {{ Auth::user()->name }}</span>
